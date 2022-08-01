@@ -7,7 +7,7 @@ import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 const uri =
   process.env.NODE_ENV === "production"
     ? "https://lift-off-tutorial-server.herokuapp.com/"
-    : " http://localhost:4000/";
+    : "http://localhost:4000/";
 
 console.log("🚀 ~ file: index.js ~ line 8 ~ uri", uri);
 const client = new ApolloClient({

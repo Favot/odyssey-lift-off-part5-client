@@ -4,7 +4,10 @@ import GlobalStyles from "./styles";
 import Pages from "./pages";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 
-const uri = "https://lift-off-tutorial-server.herokuapp.com/";
+const uri =
+  process.env.NODE_ENV === "development"
+    ? "https://lift-off-tutorial-server.herokuapp.com/"
+    : "localhost:4000";
 
 const client = new ApolloClient({
   uri,
